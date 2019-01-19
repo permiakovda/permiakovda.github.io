@@ -1,0 +1,512 @@
+/*Общие настройки*/
+html, body{
+	padding: 0;
+	margin: 0;
+	font-family: Arial, Times, sans-serif, serif;
+}
+
+h2{
+	/*...*/
+	margin-top: 0;
+	text-align: center;
+	font-size: 40px;
+	padding-top: 90px;
+}
+
+/*Адаптация заголовков второго уровня*/
+
+@media screen and (max-width: 1020px){
+	h2{
+		font-size: 4vw;
+	}
+}
+
+.multi-container{
+	width: 80%;
+	max-width: 1260px;
+	margin: 0 auto;
+	padding: 0 30px;
+}
+
+button{
+	cursor: pointer;
+	transition: font-size 0.5s;
+}
+
+/*Всплывающее окно*/
+#popupContainer{
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-image: url('img/b.png');
+	background-repeat: repeat;
+	height: 100%;
+	width: 100%;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+#popup{
+	width: 250px;
+	height: 300px;
+	background-color: white;
+	padding: 30px;
+	position: absolute;
+}
+
+#popup #closing{
+	position: absolute;
+	right: -60px;
+	top: -60px;
+	margin: 0;
+	padding-top: 2px;
+
+	color: white;
+	font-size: 50px;
+	cursor: default;
+}
+
+#popup #closing:hover{
+	color: silver;
+}
+
+
+#popup h2{
+	margin: 0;
+	padding: 10px;
+	font-size: 25px;
+}
+
+#popup input[type="text"] {
+	border: 1px solid black;
+	font-size: 18px;
+	width: 188px;
+	margin-top: 10px;
+	padding: 10px 30px;
+
+	border:1px solid #9E9E9E;
+    color: #000000;
+    font-family: Verdana;
+    background: #FFF;
+}
+
+#sendCustomerInf{
+	border: 1px solid rgb(252, 85, 124);
+	font-size: 16px;
+	color: #ffffff;
+	margin-top: 20px;
+    padding: 15px 63px 15px;
+	background-color: #ff4e2e;
+}
+
+#personalInformation {
+	font-size: 12px;
+	color: gray;
+	text-align: left;
+	line-height: 1em;
+	display: inline-block;
+	padding-left: 5px;
+}
+
+#personalInformation-checkbox{
+    display: flex;
+    align-items: center;
+}
+
+
+/*Шапка*/
+header{
+	background-color: #fbfbfb;
+}
+
+#header-container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav a{
+	color: black;
+	text-decoration: none;
+	margin-right: 30px;
+	font-size: 16px;
+}
+
+nav a:hover {
+	color: #fc557c;
+	border-bottom: 1px solid rgb(252, 85, 124);
+}
+
+nav img{
+	width: 50px;
+	display: none;
+}
+
+#contact-container{
+	display: flex;
+	align-items: center;
+}
+
+#phone{
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.callback-button{
+	border: 1px solid rgb(252, 85, 124);
+	font-size: 16px;
+	color: #ff4e2e;
+	margin: 30px;
+	padding: 12px 40px 10px;
+	background-color: #fbfbfb;
+}
+
+	/*Адаптация шапки*/
+
+@media screen and (max-width: 1020px){
+	#phone{
+			font-size: 15px;
+	}
+
+	nav a {
+		font-size: 14px;
+		margin-right: 12px;
+	}
+
+	.callback-button{
+		padding: 8px 20px 6px;
+		margin: 10px;
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 700px){
+	
+
+	/*Адаптивное навигационное меню*/
+	nav img{
+		display: block;
+	}
+
+	#submenu{
+		position: absolute;
+		z-index: 5;
+		opacity: 0;
+		transform: scaleY(0);
+		transform-origin: 0 0;
+		transition: .5s ease-in-out; 
+	}
+
+	nav:hover #submenu {
+		opacity: 1;
+		transform: scaleY(1);
+	}
+
+	#submenu a{
+		display: block;
+		padding: 3px;
+		background-color: #fbfbfb;
+		border-bottom: 1px silver solid;
+	}
+
+	#submenu a:hover{
+		border-bottom: 1px rgb(252, 85, 124) solid;
+	}
+
+
+	.callback-button span{
+		display: none;
+	}
+
+	.adaptiv-button {
+		height: 40px;
+		background-image: url("img/icons/call-answer (1).png");
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+}
+/* Верхний блок*/
+
+#top-container{
+	background-color: #fbfbfb;
+}
+
+#top-container-content{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#top-container-content img{
+	width: 70%;
+	max-width: 572px;
+}
+
+#top-container-content h1{
+	font-size: 65px;
+	margin: 10px 0;
+}
+
+#top-container-content p{
+	font-size: 25px;
+	color: rgb(137, 147, 173);
+	margin: 10px 0;
+}
+
+#top-container-content button{
+	color: #ffffff;
+	font-size: 18px;
+	margin: 20px 0;
+	background-color: #ff4e2e;
+	border: 1px solid #ff4e2e;
+	padding: 23px 70px 22px;	
+}
+
+	/*Адаптация верхнего блока*/
+
+@media screen and (max-width: 1020px){
+	#top-container-content h1{
+		font-size: 7vw;
+	}
+	#top-container-content p{
+		font-size: 3vw;
+	}
+
+	#top-container-content button{
+		font-size: 14px;
+		margin: 10px 0;
+		padding: 13px 50px 19px;
+	}
+
+}
+
+@media screen and (max-width: 500px){
+	#top-container-content img{
+		display: none;
+	}
+
+	#top-container-content{
+		justify-content: center;
+		text-align: center;
+		padding-top: 30px;
+	}
+
+}
+/*Что я делаю*/
+
+#work-container-content{
+	text-align: center;
+}
+
+#works{
+	text-align: center;
+}
+
+.work-type{
+	display: inline-block;
+
+	width: 250px;
+	padding: 2px;
+	text-align: center;
+	font-size: 20px;
+}
+
+.work-type p{
+	color: rgb(137, 147, 173);
+	font-size: 18px; 
+}
+
+									/*Кнопка - одна и таже или разные!?*/
+#work-container-content button{
+	color: #ffffff;
+	font-size: 18px;
+	margin: 90px 0;					/*расположение кнопки на почтительном растоянии*/
+	background-color: #ff4e2e;
+	border: 1px solid #ff4e2e;
+	padding: 23px 70px 22px;
+}
+
+/*Примеры работ*/
+
+#portfolio-container{
+	background-color: #fbfbfb;
+}
+
+#portfolio-content{
+	text-align: center;
+}
+
+#portfolio-examples{
+	text-align: center;
+}
+
+.example{
+	display: inline-block;
+	vertical-align: top;
+
+	max-width: 400px;
+	width: 30%;
+	padding: 2px;
+	text-align: center;
+	font-size: 20px;
+}
+
+.example img{
+	max-width: 370px;
+	width: 100%; 
+}
+
+.example p{
+	color: rgb(137, 147, 173);
+	font-size: 18px; 
+}
+
+#portfolio-content button{
+	color: #ffffff;
+	font-size: 18px;
+	margin: 90px 0;					/*расположение кнопки на почтительном растоянии*/
+	background-color: #ff4e2e;
+	border: 1px solid #ff4e2e;
+	padding: 23px 70px 22px;
+}
+
+/*тариф*/
+
+#tariff-container{
+	background-color: #ff4e2e;
+}
+
+#tariff-content h2{
+	max-width: 1060px;
+	margin: 0 auto;
+	text-align: left;
+	font-size: 40px;
+	color: #ffffff;
+	padding-bottom: : 20px; 
+}
+
+#tariff-content p{
+	max-width: 1060px;
+	margin: 0 auto;
+	text-align: left;
+	font-size: 20px;
+	color: #ffffff;
+	padding: 20px;
+	padding-bottom: 90px;
+}
+
+	/*Адаптация тариф*/
+
+@media screen and (max-width: 1020px){
+
+	#tariff-content h2{
+		font-size: 3.7vw;
+	}
+	#tariff-content p{
+		font-size: 2.2vw;
+	}
+
+}
+
+
+/*Нижний блок*/
+
+#bottom-container{
+	background-color: #ffffff;
+}
+
+#bottom-content{
+	text-align: center;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#second-nav li{
+	list-style: none;
+	padding: 8px 0;
+	width: 100px;
+
+	font-size: 16px;
+	text-align: left;
+}
+
+#second-nav a{
+	text-decoration: none;
+	color: rgb(137, 147, 173);
+}
+
+#second-nav a:hover{
+	color: black;
+}
+
+.phone{
+	background-image: url("img/icons/call-answer (1).png");
+}
+
+.mail{
+	background-image: url("img/icons/envelope (1).png");	
+}
+
+.phone-mail-img{
+	text-align: left;
+	/* для картинки с фоном */
+	padding-left: 30px;
+	background-position: left center;
+	background-repeat: no-repeat;
+	background-size: 18px 18px;
+	/* чтобы к краю страницы не прилипать */
+	/* у input'a ниже ширина будет 90% и отступ слева-справа останется 5% */
+	margin-left: 5%;
+}
+
+#contact button{
+	/*корректировка кнопки под локальные нужды*/
+	margin: 5px;
+}
+#socil-contacts img{
+	margin: 5px;
+}
+
+	/*Адаптация нижний блок*/
+
+@media screen and (max-width: 760px){
+
+	#bottom-content{
+		display: inline-block;
+	}
+
+	#second-nav li{
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	#phone-and-mail{
+		display: inline-block;
+		margin: 0 auto;
+		font-size: 15px;
+	}
+
+	#contact button{
+		background-image: none;
+	}
+
+}
+
+/*подвал*/
+
+footer{
+	background-color: #31293c;
+}
+
+#footer-contaner p{
+	color: #ffffff;
+	font-size: 16px;
+	text-align: center;
+	margin: 0;
+	padding-top: 30px;
+	padding-bottom: 30px; 
+}

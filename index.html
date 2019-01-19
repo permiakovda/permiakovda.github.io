@@ -1,0 +1,195 @@
+<!--
+Landing page по материалам Мастер-класса "Обзор веб-технологий и верстка первой страницы" от онлайн университета Skillbox (https://skillbox.ru/)
+Автор работы: Пермяков Денис Александрович
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Дмитрий Алексеев - официальный сайт</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="keywords" content="Front-end, Веб, Верстальщик">
+	<meta name="description" content="Dmitry Alekseev's official website">
+
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/script.js"></script>
+</head>
+<body>
+
+	<!-- Всплывающее окно -->
+	<div id="popupContainer">
+		<div id="popup">
+			<span id="closing">&#10006;</span>
+			<h2>Форма заявки</h2>
+			<input id="customerName" type="text" name="customerName" placeholder="Имя">
+
+			<input id="customerPhone" type="text" name="customerPhone" placeholder="Телефон">
+
+			<button id="sendCustomerInf">Заказать проект</button>
+
+			<div id="personalInformation-checkbox">
+
+
+				<input id="sendPersonalInformation" type="checkbox" name="personalInformation" value="a2"> <p id="personalInformation">Я согласен с условиями обработки персональных данных </p>				
+			</div>
+
+		</div>
+	</div>
+
+
+	<!-- Шапка -->
+
+	<header>
+		<div id="header-container" class="multi-container">
+			<nav>
+				<div id="adaptive-menu">
+					<img src="img\hamburger.jpg" id="submenu-img">
+					
+					<div id="submenu">
+						<a href="#work">Услуги</a>
+						<a href="#portfolio">Портфолио</a>
+						<a href="#tariff">Стоимость</a>						
+					</div>		
+				</div>
+			</nav>
+
+			<div id="contact-container">
+				<span id="phone">+7 (499) 995-55-77</span>
+				<button class="callback-button adaptiv-button"><span>Заказать звонок</span></button>
+			</div>
+		</div>
+
+	</header>
+
+	<!-- Верхний блок -->
+
+	<div id="top-container">
+		<div id="top-container-content" class="multi-container">
+
+			<div>
+				<h1>Дмитрий Алексеев</h1>
+				<p>Frontend-разработчик и веб-верстальщик</p>
+				<button class="callback-button">Узнать больше</button>
+			</div>
+
+			<img src="img/Dmitry Alekseev.png">			<!-- crap -->
+		</div>
+	</div>
+
+	<!-- Что я делаю?! -->
+
+	<div id="work-container">
+		<div id="work-container-content" class="multi-container">
+			<h2> <a name="work"></a> Что я делаю</h2>
+
+			<div id="works">
+				<div class="work-type">
+					<img src="img/icons/tools-and-utensils.png">
+					<p>Вёрстка лендинг–страниц и сайтов любой сложности</p>
+				</div>
+				<div class="work-type">
+					<img src="img/icons/responsive.png">
+					<p>Адаптивная вёрстка под все браузеры и устройства</p>
+				</div>
+				<div class="work-type">
+					<img src="img/icons/programming.png">
+					<p>Frontend–разработка и программирование</p>
+				</div>				
+				<div class="work-type">
+					<img src="img/icons/coding (1).png">
+					<p>Исправление и доработка существующей вёрстки</p>
+				</div>	
+			</div>
+
+			<button class="callback-button">Узнать больше</button>				<!-- crap -->
+		</div>
+	</div>
+
+	<!-- Примеры работ -->
+
+	<div id="portfolio-container">
+		<div id="portfolio-content" class="multi-container">
+			<h2> <a name="portfolio"></a> Примеры моих работ</h2>
+
+			<div id="portfolio-examples">
+				<div class="example">
+					<img src="img/Portfolio_1.png">
+					<p>Сайт психолога Веры Антоновой</p>
+				</div>
+
+				<div class="example">
+					<img src="img/Portfolio_2.png">
+					<p>Сайт магазина детской одежды</p>
+				</div>
+
+				<div class="example">
+					<img src="img/Portfolio_3.png">
+					<p>Сайт магазина «Рыболов»</p>
+				</div>
+			</div>
+
+			<button class="callback-button">Узнать больше</button>
+		</div>
+	</div>
+
+	<!-- Тариф -->
+
+	<div id="tariff-container">
+		<div id="tariff-content" class="multi-container">
+
+			<h2> <a name="tariff"></a> Адаптивная вёрстка под все устройства и браузеры от 1000 рублей всего за 4 часа.*</h2>  					<!-- crap -->
+
+			<p>* Срок и стоимость могут отличаться от заявленных и  ассчитываются  индивидуально,    в зависимости от сложности задач.	</p>
+		</div>	
+	</div>
+
+	<!-- Нижний блок -->
+
+	<div id="bottom-container">
+		<div id="bottom-content" class="multi-container">
+			
+			<div id="second-nav">
+				<ul>
+					<li> <a href="#work">Услуги</a> </li>
+					<li> <a href="#portfolio">Портфолио</a> </li>
+					<li> <a href="#tariff">Стоимость</a> </li>
+				</ul>
+			</div>
+
+			<div id="phone-and-mail">
+				<div class="phone phone-mail-img">
+					<span>+7 (499) 995-77-55</span>						
+				</div>
+
+				<br>
+
+				<div class="mail phone-mail-img">
+					<span>dmitry@alekseev.com</span>						
+				</div>
+
+			</div>
+
+
+			<div id="contact">
+				<button class="callback-button adaptiv-button">Заказать звонок</button>
+
+				<div id="socil-contacts">
+					<img src="img/icons/vk (1).png">
+					<img src="img/icons/facebook-logo (1).png">
+					<img src="img/icons/twitter-logo-silhouette.png">
+					<img src="img/icons/instagram-social-network-logo-of-photo-camera.png">
+				</div>
+			</div>
+		</div>
+
+	<!-- Подвал -->
+
+<footer>
+	<div id="footer-contaner">
+		<p>© Дмитрий Алексеев, 2016 – 2018</p>
+	</div>
+</footer>
+
+
+</body>
+</html>
